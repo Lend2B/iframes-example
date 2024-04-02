@@ -38,17 +38,10 @@ export const IframePages = () => {
     },
   });
 
-  // if (isLoading)
-  //   return (
-  //     <div className="w-full h-screen flex flex-col gap-2 items-center justify-center text-black text-xl ">
-  //       Loading...
-  //     </div>
-  //   );
-
   if (!token) {
     return (
       <section className="w-full h-screen flex flex-col gap-3 items-center justify-center">
-        <h1 className="font-semibold text-2xl">ABL login</h1>
+        <h1 className="font-semibold text-2xl">Insert Credentials</h1>
         <Formik
           initialValues={{
             email: "callao-abl@yopmail.com",
@@ -89,23 +82,29 @@ export const IframePages = () => {
 
   return (
     <section className="w-full h-screen flex  justify-center items-center p-10">
-      <div className="flex flex-col items-center w-4/6 h-full">
+      <div className="flex flex-col items-center  w-5/6 h-full">
         <iframe
           id={iframeId + "-creditStatus"}
-          src={`https://chile-dev.lend2b.com/frame/CreditStatus?token=${token}`}
-          className="w-full h-2/6"
+          src={`http://localhost:5173/frame/CreditStatus?token=${token}`}
+          height="180px"
+          width="1000px"
+          // className="w-full"
         />
         <iframe
           id={iframeId + "-extensionsReport"}
-          src={`https://chile-dev.lend2b.com/frame/ExtensionsReport?token=${token}`}
-          className="w-full h-4/6"
+          src={`http://localhost:5173/frame/ExtensionsReport?token=${token}`}
+          width="1000px"
+          height="500px"
+          // className="w-full h-4/6"
         />
       </div>
-      <div className="h-full w-2/6 ">
+      <div className="h-full ">
         <iframe
           id={iframeId + "-nextExpirations"}
-          src={`https://chile-dev.lend2b.com/frame/NextExpirations?token=${token}`}
-          className="w-4/6 h-full mx-auto"
+          src={`http://localhost:5173/frame/NextExpirations?token=${token}`}
+          width="300px"
+          height="420px"
+          className="m-auto"
         />
       </div>
     </section>
