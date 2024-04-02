@@ -85,14 +85,14 @@ export const IframePages = () => {
       <div className="flex flex-col items-center  w-5/6 h-full">
         <iframe
           id={iframeId + "-creditStatus"}
-          src={`http://localhost:5173/frame/CreditStatus?token=${token}`}
+          src={`https://chile-dev.lend2b.com/frame/CreditStatus?token=${token}`}
           height="180px"
           width="1000px"
           // className="w-full"
         />
         <iframe
           id={iframeId + "-extensionsReport"}
-          src={`http://localhost:5173/frame/ExtensionsReport?token=${token}`}
+          src={`https://chile-dev.lend2b.com/frame/ExtensionsReport?token=${token}`}
           width="1000px"
           height="500px"
           // className="w-full h-4/6"
@@ -101,7 +101,7 @@ export const IframePages = () => {
       <div className="h-full ">
         <iframe
           id={iframeId + "-nextExpirations"}
-          src={`http://localhost:5173/frame/NextExpirations?token=${token}`}
+          src={`https://chile-dev.lend2b.com/frame/NextExpirations?token=${token}`}
           width="300px"
           height="420px"
           className="m-auto"
