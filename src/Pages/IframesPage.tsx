@@ -17,7 +17,7 @@ export const IframePages = () => {
 
   const getAccessToken = async (values: Props) => {
     const response = await axios.post(
-      "https://chile-dev-abl-api.lend2b.com/get-access-token",
+      `${import.meta.env["VITE_ABL_ENDPOINT"]}/get-access-token`,
       {
         ...values,
       },
@@ -85,14 +85,18 @@ export const IframePages = () => {
       <div className="flex flex-col items-center  w-5/6 h-full">
         <iframe
           id={iframeId + "-creditStatus"}
-          src={`https://chile-dev.lend2b.com/frame/CreditStatus?token=${token}`}
+          src={`${
+            import.meta.env["VITE_ENDPOINT"]
+          }/CreditStatus?token=${token}`}
           height="180px"
           width="1000px"
           // className="w-full"
         />
         <iframe
           id={iframeId + "-extensionsReport"}
-          src={`https://chile-dev.lend2b.com/frame/ExtensionsReport?token=${token}`}
+          src={`${
+            import.meta.env["VITE_ENDPOINT"]
+          }/ExtensionsReport?token=${token}`}
           width="1000px"
           height="500px"
           // className="w-full h-4/6"
@@ -101,7 +105,9 @@ export const IframePages = () => {
       <div className="h-full ">
         <iframe
           id={iframeId + "-nextExpirations"}
-          src={`https://chile-dev.lend2b.com/frame/NextExpirations?token=${token}`}
+          src={`${
+            import.meta.env["VITE_ENDPOINT"]
+          }/NextExpirations?token=${token}`}
           width="300px"
           height="420px"
           className="m-auto"
