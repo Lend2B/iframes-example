@@ -72,7 +72,7 @@ export const IframePages = () => {
               type="submit"
               className="bg-blue-500 p-2 w-1/6 rounded-lg text-white hover:bg-blue-700 transition-all ease-in-out duration-150 mt-1"
             >
-              {isPending ? <span>Loading...</span> : <span>Sign In</span>}
+              {isPending ? <span>Loading ...</span> : <span>Sign In</span>}
             </button>
           </Form>
         </Formik>
