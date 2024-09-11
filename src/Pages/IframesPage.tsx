@@ -46,7 +46,7 @@ export const IframePages = () => {
           initialValues={{
             email: "callao-abl@yopmail.com",
             password: "Demo123*",
-            entity_email: "client-qa@yopmail.com",
+            entity_email: "client-stage@yopmail.com",
           }}
           validationSchema={SignInValidation}
           onSubmit={mutate}
