@@ -46,7 +46,7 @@ export const IframePages = () => {
         <Formik
           initialValues={{
             email: "callao-abl@yopmail.com",
-            password: "r@jop9i*WiB",
+            password: "",
             entity_email: "client-qa@yopmail.com",
           }}
           validationSchema={SignInValidation}
@@ -126,7 +126,7 @@ export const IframePages = () => {
           id={iframeId + "-creditPortfolio"}
           src={`${
             import.meta.env["VITE_ENDPOINT"]
-          }/CreditPortfolioUpload?token=${token}`}
+          }/EntityStatus?token=${token}`}
           className="m-auto w-full h-full"
         />
       </section>
